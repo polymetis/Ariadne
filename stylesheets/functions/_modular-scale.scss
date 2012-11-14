@@ -1,0 +1,121 @@
+@function modular-scale($value, $increment, $ratio) {
+  @if $increment > 0 {
+    @for $i from 1 through $increment {
+      $value: ($value * $ratio);
+    }
+  }
+
+  @if $increment < 0 {
+    $increment: abs($increment);
+    @for $i from 1 through $increment {
+      $value: ($value / $ratio);
+    }
+  }
+
+  @return $value;
+}
+
+//  div {
+//                     Increment Up GR with positive value
+//   font-size:        modular-scale(14px,   1, 1.618); // returns: 22.652px
+//
+//                     Increment Down GR with negative value
+//   font-size:        modular-scale(14px,  -1, 1.618); // returns: 8.653px
+//
+//                     Can be used with ceil(round up) or floor(round down)
+//   font-size: floor( modular-scale(14px, 1, 1.618) ); // returns: 22px
+//   font-size:  ceil( modular-scale(14px, 1, 1.618) ); // returns: 23px
+//  }
+//
+// modularscale.com
+
+@function golden-ratio($value, $increment) {
+  @return modular-scale($value, $increment, 1.618)
+}
+
+//  div {
+//    font-size: golden-ratio(14px, 1); // returns: 22.652px
+//  }
+//
+// goldenratiocalculator.com
+
+// Music Intervals
+
+@function unison($value, $increment) {
+  @return modular-scale($value, $increment, 1)
+}
+
+@function minor-second($value, $increment) {
+  @return modular-scale($value, $increment, 1.067)
+}
+
+@function major-second($value, $increment) {
+  @return modular-scale($value, $increment, 1.125)
+}
+
+@function minor-third($value, $increment) {
+  @return modular-scale($value, $increment, 1.2)
+}
+
+@function major-third($value, $increment) {
+  @return modular-scale($value, $increment, 1.25)
+}
+
+@function perfect-fourth($value, $increment) {
+  @return modular-scale($value, $increment, 1.333)
+}
+
+@function augmented-forth($value, $increment) {
+  @return modular-scale($value, $increment, 1.414)
+}
+
+@function diminished-fifth($value, $increment) {
+  @return modular-scale($value, $increment, 1.414)
+}
+
+@function perfect-fifth($value, $increment) {
+  @return modular-scale($value, $increment, 1.5)
+}
+
+@function minor-sixth($value, $increment) {
+  @return modular-scale($value, $increment, 1.6)
+}
+
+@function major-sixth($value, $increment) {
+  @return modular-scale($value, $increment, 1.667)
+}
+
+@function minor-seventh($value, $increment) {
+  @return modular-scale($value, $increment, 1.778)
+}
+
+@function major-seventh($value, $increment) {
+  @return modular-scale($value, $increment, 1.875)
+}
+
+@function octave($value, $increment) {
+  @return modular-scale($value, $increment, 2)
+}
+
+@function major-tenth($value, $increment) {
+  @return modular-scale($value, $increment, 2.5)
+}
+
+@function major-eleventh($value, $increment) {
+  @return modular-scale($value, $increment, 2.667)
+}
+
+@function major-twelfth($value, $increment) {
+  @return modular-scale($value, $increment, 3)
+}
+
+@function double-octave($value, $increment) {
+  @return modular-scale($value, $increment, 4)
+}
+
+// Added function aliases for Music Interval scales.  http://24ways.org/2011/composing-the-new-canon 
+// Usage 
+// div {
+//    font-size: perfect-fourth(14px, 1); // returns: 18.662px
+//  }
+
