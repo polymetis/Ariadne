@@ -1,0 +1,22 @@
+/* Figure for video === http://bit.ly/vUsPFk ===========================================*/
+
+@mixin theatre($name, $height: 9, $width: 16) {
+.$name {
+  margin: 0 0 0 0;
+	background: rgb(0,0,0);
+	position: relative;
+	padding-bottom:($height/$width)*100%;
+	height: 0;
+	overflow: hidden;
+	text-shadow: none;}
+
+.$name img,
+.$name object,
+.$name video,
+.$name embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;}
+}
