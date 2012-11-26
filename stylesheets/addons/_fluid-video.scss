@@ -1,7 +1,7 @@
 /* Figure for video === http://bit.ly/vUsPFk ===========================================*/
 
 @mixin theatre($name, $height: 9, $width: 16) {
-.$name {
+#{$name} {
   margin: 0 0 0 0;
 	background: rgb(0,0,0);
 	position: relative;
@@ -10,10 +10,10 @@
 	overflow: hidden;
 	text-shadow: none;}
 
-.$name img,
-.$name object,
-.$name video,
-.$name embed {
+#{$name} img,
+#{$name} object,
+#{$name} video,
+#{$name} embed {
 	position: absolute;
 	top: 0;
 	left: 0;
