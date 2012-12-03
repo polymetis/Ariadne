@@ -1,13 +1,7 @@
 #Ariadne - A framework for Codekit
 
-Let's face it Codekit is awesome and it has a really power tool set all on its own without having us to learn to trim a neckbeard and yet we ignoring one of its more powerful features - Javascript Import from frameworks. 
+This is designed to be combiation of both [twitter bootstrap](http://twitter.github.com/bootstrap/) and [bourbon](http://bourbon.io). 
 
-I plan on making Ariadne something like [Janus](https://github.com/carlhuda/janus) for Codekit. 
+Why when you can easily use both. Twitter bootstrap is great but is designed to be used with a lot of extra classes floating about our markup -- I am aware that you can easily avoid this but I am talking common usage. This is designed more as a mixin library for common values to keep our class names clean and is built on the philosophy if you write some specific code more than once it belongs in a framework while keeping our output css clean. 
 
-Features it currently has. 
-* [Bourbon](https://github.com/thoughtbot/bourbon) with a couple of additions and changes.
-
-Features in the works
-* Common Javascript Libraries using submodules
-* Rake update and easy curl installation
-
+If you want to contribute then that is great submit a pull request and I will look at it. (It is quite likely that I will accept it if you follow graceful downgrade principle and work towards modern markup[Buzzwords include HTML5 and CSS3]) 
