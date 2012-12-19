@@ -8,7 +8,7 @@ If you want to contribute then that is great submit a pull request and I will lo
 
 ##Kit Files
 
-Also there is not [html5 boilerplate](http://html5boilerplate.com) header and footer files for you to import 
+Also there is now [html5 boilerplate](http://html5boilerplate.com) header and footer files for you to import 
 
 Just set the following variables at the top of your file. 
 
